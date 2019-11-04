@@ -1,8 +1,11 @@
+console.log("teste");
 const publicVapidKey =
   "BFRJjJPwjqyWtcb2DfTK3E46btA1O7GzGfvYq54xU0YlnKi6LPBWaw6UnZikCNKdI--VKk-0ollDlzMqtqBiiew";
 
 if ("serviceWorker" in navigator) {
   send().catch(err => console.error(err));
+} else {
+  console.log("not have suport");
 }
 
 function urlBase64ToUint8Array(base64String) {
