@@ -43,7 +43,7 @@ async function send() {
 
   // console.log(JSON.stringify(subscription));
 
-  await fetch("http://192.168.90.121:5312/subscribe", {
+  await fetch("https://errorr-erro.herokuapp.com/subscribe", {
     method: "POST",
     body: JSON.stringify(subscription),
     headers: {
