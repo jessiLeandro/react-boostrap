@@ -197,14 +197,19 @@ export const registerServiceWorker = () => {
 
     console.log("Send Push...");
 
-    // console.log(JSON.stringify(subscription));
+    // console.log(JSON.stringify(subscription));,
 
-    await fetch("https://errorr-erro.herokuapp.com/api/subscribe", {
-      method: "POST",
-      body: JSON.stringify(subscription),
-      headers: {
-        "content-type": "application/json"
+    // await fetch("https://errorr-erro.herokuapp.com/api/subscribe", {
+    await fetch(
+      `${process.env.REACT_APP_API_URL ||
+        "http://localhost:5312"}/api/subscribe`,
+      {
+        method: "POST",
+        body: JSON.stringify(subscription),
+        headers: {
+          "content-type": "application/json"
+        }
       }
-    });
+    );
   }
 };
