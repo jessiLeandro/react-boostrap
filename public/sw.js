@@ -4,7 +4,15 @@ self.addEventListener("install", e => {
   e.waitUntil(
     caches.open(cacheName).then(cache => {
       return cache
-        .addAll([`/`, `/index.html`, `/logo192.png`, `/logo512.png`, `/styles`])
+        .addAll([
+          `/`,
+          `/index.html`,
+          `/logo192.png`,
+          `/favicon.ico`,
+          `/logo512.png`,
+          `/styles`,
+          `controledemodulos-01.png`
+        ])
         .then(() => self.skipWaiting());
     })
   );
